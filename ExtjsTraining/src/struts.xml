@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD   
+Struts Configuration 2.1//EN"   
+"http://struts.apache.org/dtds/struts-2.1.dtd">  
+<struts>  
+<package name="default" extends="json-default">  
+<action name="MovieServlet" class="com.highradius.Action.MovieStruts" method= "getMovieList">  
+<result type = "json">
+<param name ="root">resultSet</param>
+</result>
+</action>  
+<action name="LanguageServlet" class="com.highradius.Action.MovieStruts" method= "getMovieLanguage">  
+<result type = "json">
+<param name ="root">languageList</param>
+</result>
+</action>  
+<action name="FeatureServlet" class="com.highradius.Action.MovieStruts" method= "getSpecialFeatures">  
+<result type = "json">
+<param name ="root">featureList</param>
+</result>
+</action> 
+<action name="RatingServlet" class="com.highradius.Action.MovieStruts" method= "getMovieRating">  
+<result type = "json">
+<param name ="root">ratingList</param>
+</result>
+</action> 
+<action name="DeleteMovieListServlet" class="com.highradius.Action.MovieStruts" method= "deleteMovies">  
+<result type = "json">
+<param name ="root">success</param>
+</result>
+</action> 
+<action name="InsertMovieListServlet" class="com.highradius.Action.MovieStruts" method = "insertMovies">  
+<result type = "json">
+<param name ="root">success</param>
+</result>
+</action> 
+<action name="EditMovieListServlet" class="com.highradius.Action.MovieStruts" method = "editMovieList">  
+<result type = "json">
+<param name ="root">success</param>
+</result>
+</action> 
+<action name="SearchServlet" class="com.highradius.Action.MovieStruts" method = "searchMovies">  
+<result type = "json">
+<param name ="root">searchResultSet</param>
+</result>
+</action>  
+</package>  
+  
+</struts>   
